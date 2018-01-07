@@ -1,15 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hotel_project;
 
 import java.util.List;
-/**
- *
- * @author Dell
- */
+
 public class TPokoj {
 
 	protected int Numer;
@@ -20,117 +12,79 @@ public class TPokoj {
 	protected String Stan;
 	protected List<TRezerwacja> Rezerwacje;
 
-	/**
-	 * 
-	 * @param Numer
-	 * @param Il_miejsc
-	 * @param Hotel
-	 * @param Klasa
-	 * @param Cena
-	 * @param Stan
-	 */
-	public TPokoj TPokoj(int Numer, int Il_miejsc, String Hotel, String Klasa, float Cena, String Stan) {
-		// TODO - implement TPokoj.TPokoj
-		throw new UnsupportedOperationException();
+        
+	public void TPokoj(int Numer, int Il_miejsc, THotel Hotel, String Klasa, float Cena, String Stan) {
+		this.Numer = Numer;
+                this.Il_miejsc = Il_miejsc;
+                this.Hotel = Hotel;
+                this.Klasa = Klasa;
+                this.Cena = Cena;
+                this.Stan = Stan;
+                
 	}
            @Override
 	public String toString() {
-		// TODO - implement TPokoj.toString
-		throw new UnsupportedOperationException();
+		return this.Numer + " " + this.Il_miejsc + " " + this.Hotel.toString() + " " + this.Klasa + " " + this.Cena + " " + this.Stan;
 	}
 
-	public void getNumer() {
-		// TODO - implement TPokoj.getNumer
-		throw new UnsupportedOperationException();
+	public int getNumer() {
+		return this.Numer;
 	}
 
-	/**
-	 * 
-	 * @param Numer
-	 */
 	public void setNumer(int Numer) {
-		// TODO - implement TPokoj.setNumer
-		throw new UnsupportedOperationException();
+		this.Numer = Numer;
 	}
 
-	public void getIl_miejsc() {
-		// TODO - implement TPokoj.getIl_miejsc
-		throw new UnsupportedOperationException();
-	}
+	public int getIl_miejsc() {
+		return this.Il_miejsc;
+        }
 
-	/**
-	 * 
-	 * @param Il_miejsc
-	 */
 	public void setIl_miejsc(int Il_miejsc) {
-		// TODO - implement TPokoj.setIl_miejsc
-		throw new UnsupportedOperationException();
+		this.Il_miejsc = Il_miejsc;
 	}
 
-	public void getHotel() {
-		// TODO - implement TPokoj.getHotel
-		throw new UnsupportedOperationException();
+	public String getHotel() {
+		return this.Hotel.toString();
 	}
 
-	/**
-	 * 
-	 * @param Hotel
-	 */
-	public void setHotel(int Hotel) {
-		// TODO - implement TPokoj.setHotel
-		throw new UnsupportedOperationException();
+	public void setHotel(THotel Hotel) {
+		this.Hotel = Hotel;
 	}
 
-	public void getKlasa() {
-		// TODO - implement TPokoj.getKlasa
-		throw new UnsupportedOperationException();
+	public String getKlasa() {
+		return this.Klasa;
 	}
 
-	/**
-	 * 
-	 * @param Klasa
-	 */
-	public void setKlasa(int Klasa) {
-		// TODO - implement TPokoj.setKlasa
-		throw new UnsupportedOperationException();
+	public void setKlasa(String Klasa) {
+		this.Klasa = Klasa;
 	}
 
-	public void getCena() {
-		// TODO - implement TPokoj.getCena
-		throw new UnsupportedOperationException();
+	public float getCena() {
+		return this.Cena;
 	}
 
-	/**
-	 * 
-	 * @param Cena
-	 */
-	public void setCena(int Cena) {
-		// TODO - implement TPokoj.setCena
-		throw new UnsupportedOperationException();
+	public void setCena(Float Cena) {
+		this.Cena = Cena;
 	}
 
-	public void getStan() {
-		// TODO - implement TPokoj.getStan
-		throw new UnsupportedOperationException();
+	public String getStan() {
+		return this.Stan;
 	}
 
-	/**
-	 * 
-	 * @param Stan
-	 */
-	public void setStan(int Stan) {
-		// TODO - implement TPokoj.setStan
-		throw new UnsupportedOperationException();
+	public void setStan(String Stan) {
+		this.Stan = Stan;
 	}
 
-	public boolean equals() {
-		// TODO - implement TPokoj.equals
-		throw new UnsupportedOperationException();
+	public boolean equals(TPokoj obj) {
+		if(obj == null)
+                    return false;
+                if(this.Numer == obj.Numer)
+                    return this.Hotel == obj.Hotel;
+                else
+                    return false;
 	}
 
-	public THotel searchHotel() {
-		// TODO - implement TPokoj.searchHotel
-		throw new UnsupportedOperationException();
+	public THotel searchHotel() {	
 	}
 
 }

@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hotel_project;
 
-/**
- *
- * @author Dell
- */
 public class TUser {
 
 	public String Login;
@@ -18,101 +9,62 @@ public class TUser {
 	protected String Imie;
 	protected String Nazwisko;
 
-	/**
-	 * 
-	 * @param Login
-	 * @param Haslo
-	 * @param Email
-	 * @param Pesel
-	 * @param Imie
-	 * @param Nazwisko
-	 */
-	public TUser TUser(String Login, String Haslo, String Email, String Pesel, String Imie, String Nazwisko) {
-		// TODO - implement TUser.TUser
-		throw new UnsupportedOperationException();
+
+	public void TUser(String Login, String Haslo, String Email, String Pesel, String Imie, String Nazwisko) {
+		this.Login = Login;
+                this.Haslo = Haslo;
+                this.Email = Email;
+                this.Pesel = Pesel;
+                this.Imie = Imie;
+                this.Nazwisko = Nazwisko;
 	}
 
-	public void setUser() {
-		// TODO - implement TUser.setUser
-		throw new UnsupportedOperationException();
+	public String getLogin() {
+		return this.Login;
 	}
 
-	public void getLogin() {
-		// TODO - implement TUser.getLogin
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param Login
-	 */
 	public void setLogin(String Login) {
-
+                this.Login = Login;
 	}
 
-	public void getHaslo() {
-		// TODO - implement TUser.getHaslo
-		throw new UnsupportedOperationException();
+	public String getHaslo() {
+		return this.Haslo;
 	}
 
-	/**
-	 * 
-	 * @param Haslo
-	 */
 	public void setHaslo(String Haslo) {
-
+                this.Haslo = Haslo;
 	}
 
-	public void getEmail() {
-		// TODO - implement TUser.getEmail
-		throw new UnsupportedOperationException();
+	public String getEmail() {
+		return this.Email;
 	}
 
-	/**
-	 * 
-	 * @param Email
-	 */
 	public void setEmail(String Email) {
-
+                this.Email = Email;
 	}
 
-	public void getPesel() {
-		// TODO - implement TUser.getPesel
-		throw new UnsupportedOperationException();
+	public String getPesel() {
+		return this.Pesel;
 	}
 
-	/**
-	 * 
-	 * @param Pesel
-	 */
 	public void setPesel(String Pesel) {
-
+                this.Pesel = Pesel;
 	}
 
-	public void getImie() {
-		// TODO - implement TUser.getImie
-		throw new UnsupportedOperationException();
+	public String getImie() {
+		return this.Imie;
 	}
 
-	/**
-	 * 
-	 * @param Imie
-	 */
 	public void setImie(String Imie) {
-
+                this.Imie = Imie;
 	}
 
-	public void getNazwisko() {
-		// TODO - implement TUser.getNazwisko
-		throw new UnsupportedOperationException();
+	public String getNazwisko() {
+		return this.Nazwisko;
 	}
 
-	/**
-	 * 
-	 * @param Nazwisko
-	 */
 	public void setNazwisko(String Nazwisko) {
-
+                this.Nazwisko = Nazwisko;
 	}
 
 }
