@@ -12,6 +12,10 @@ public class TAplikacja {
 
 	}
         
+        public void searchHotel(){
+            ;
+        }
+        
 	public void showlHotel() {
 		// TODO - implement TAplikacja.showlHotel
 		throw new UnsupportedOperationException();

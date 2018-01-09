@@ -47,14 +47,14 @@ public class THotel {
 	}
 
 	public List<String> getPokoje() {
-            List<String> Pokoje = new List<String>();
-            Iterator<TPokoj> help = TPokoj.iterator();  
+            List<String> Pokojee = new List<String>();
+            Iterator<TPokoj> help = Pokoje.iterator();
             while(help.hasNext())
                     {
                         TPokoj next = help.next();
-                        Pokoje.add(next.toString());
+                        Pokojee.add(next.toString());
                     }
-            return Pokoje;
+            return Pokojee;
 	}
 
 	public void setPokoje(List<TPokoj> Pokoje) {

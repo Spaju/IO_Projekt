@@ -42,24 +42,24 @@ public class TFabryka {
 	 * 
 	 * @param data
 	 */
-	public TPokoj Create_pokoj(String[] data) {
+	public TPokoj Create_pokoj(String[] data, THotel Hotel) {
 		// TODO - implement TFabryka.Create_pokoj
 		TPokoj TPokoj = null;
                 switch(Integer.parseInt(data[0]))
                 {
                     case 0:
                         TPokoj = new TPokoj(); //do wyszukiwania
-                        TPokoj.setHotel(data[1]);
-                        TPokoj.setNumer(Integer.parseInt(data[2]));
+                        TPokoj.setHotel(Hotel);
+                        TPokoj.setNumer(Integer.parseInt(data[1]));
                         break;
                     case 1:
                         TPokoj = new TPokoj(); //do tworzenia nowego obiektu
-                        TPokoj.setHotel(data[1]);
-                        TPokoj.setNumer(Integer.parseInt(data[2]));
-                        TPokoj.setCena(Float.parseFloat(data[3]));
-                        TPokoj.setStan(data[4]);
-                        TPokoj.setKlasa(data[5]);
-                        TPokoj.setIl_miejsc(Integer.parseInt(data[6]));
+                        TPokoj.setHotel(Hotel);
+                        TPokoj.setNumer(Integer.parseInt(data[1]));
+                        TPokoj.setCena(Float.parseFloat(data[2]));
+                        TPokoj.setStan(data[3]);
+                        TPokoj.setKlasa(data[4]);
+                        TPokoj.setIl_miejsc(Integer.parseInt(data[5]));
                         break;
                 }
                 return TPokoj;
@@ -82,8 +82,7 @@ public class TFabryka {
                         THotel = new THotel(); //do tworzenia nowego obiektu
                         THotel.setNazwa(data[1]);
                         THotel.setLokacja(data[2]);
-                        THotel.setPokoje(data[3]);
-                        THotel.setIl_wolnych_miejsc(data[4]);
+                        THotel.setIl_wolnych_miejsc(data[3]);
                         break;
                 }
                 return THotel;
@@ -93,7 +92,7 @@ public class TFabryka {
 	 * 
 	 * @param data
 	 */
-	public TRezerwacja Create_rezerwacja(String[] data) {
+	public TRezerwacja Create_rezerwacja(String[] data, TUser User, TPokoj Pokoj) {
 		// TODO - implement TFabryka.Create_rezerwacja
 		TRezerwacja TRezerwacja = null;
                 switch(Integer.parseInt(data[0]))
@@ -107,8 +106,8 @@ public class TFabryka {
                         TRezerwacja.setID_rezerwacji(Integer.parseInt(data[1]));;
                         TRezerwacja.setData(data[2]);
                         TRezerwacja.setCzas_trwania(data[3]);
-                        TRezerwacja.setKlient(data[4]);
-                        TRezerwacja.setPokoj(data[5]);
+                        TRezerwacja.setKlient(User);
+                        TRezerwacja.setPokoj(Pokoj);
                         break;
                 }
                 return TRezerwacja;

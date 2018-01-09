@@ -1,9 +1,11 @@
 package hotel_project;
 
+import java.util.Iterator;
 import java.util.List;
 
 
 public class TPokoj {
+
 
 	protected int Numer;
 	protected int Il_miejsc;
@@ -27,7 +29,7 @@ public class TPokoj {
 	public String toString() {
 		return this.Numer + " " + this.Il_miejsc + " " + this.Hotel.toString() + " " + this.Klasa + " " + this.Cena + " " + this.Stan;
 	}
-
+        
 	public int getNumer() {
 		return this.Numer;
 	}
@@ -83,10 +85,5 @@ public class TPokoj {
                     return this.Hotel == obj.Hotel;
                 else
                     return false;
-	}
-
-	public THotel searchHotel() {	
-            throw new UnsupportedOperationException();
-	}
-
+        }
 }
