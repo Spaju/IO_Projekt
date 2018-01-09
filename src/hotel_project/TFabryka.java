@@ -10,15 +10,10 @@ package hotel_project;
  * @author Dell
  */
 public class TFabryka {
-
-	public TFabryka() {
-		// TODO - implement TFabryka.TFabryka
-		throw new UnsupportedOperationException();
-	}
-
 	/**
 	 * 
 	 * @param data
+     * @return 
 	 */
 	public TUser Create_user(String[] data) {
 		// TODO - implement TFabryka.Create_user
@@ -41,9 +36,7 @@ public class TFabryka {
                 }
                 return TUser;
         }
-                        
-                
-	
+                       
 
 	/**
 	 * 
@@ -51,7 +44,25 @@ public class TFabryka {
 	 */
 	public TPokoj Create_pokoj(String[] data) {
 		// TODO - implement TFabryka.Create_pokoj
-		throw new UnsupportedOperationException();
+		TPokoj TPokoj = null;
+                switch(Integer.parseInt(data[0]))
+                {
+                    case 0:
+                        TPokoj = new TPokoj(); //do wyszukiwania
+                        TPokoj.setHotel(data[1]);
+                        TPokoj.setNumer(Integer.parseInt(data[2]));
+                        break;
+                    case 1:
+                        TPokoj = new TPokoj(); //do tworzenia nowego obiektu
+                        TPokoj.setHotel(data[1]);
+                        TPokoj.setNumer(Integer.parseInt(data[2]));
+                        TPokoj.setCena(Float.parseFloat(data[3]));
+                        TPokoj.setStan(data[4]);
+                        TPokoj.setKlasa(data[5]);
+                        TPokoj.setIl_miejsc(Integer.parseInt(data[6]));
+                        break;
+                }
+                return TPokoj;
 	}
 
 	/**
@@ -60,7 +71,22 @@ public class TFabryka {
 	 */
 	public THotel Create_hotel(String[] data) {
 		// TODO - implement TFabryka.Create_hotel
-		throw new UnsupportedOperationException();
+		THotel THotel = null;
+                switch(Integer.parseInt(data[0]))
+                {
+                    case 0:
+                        THotel = new THotel(); //do wyszukiwania
+                        THotel.setNazwa(data[1]);   
+                        break;
+                    case 1:
+                        THotel = new THotel(); //do tworzenia nowego obiektu
+                        THotel.setNazwa(data[1]);
+                        THotel.setLokacja(data[2]);
+                        THotel.setPokoje(data[3]);
+                        THotel.setIl_wolnych_miejsc(data[4]);
+                        break;
+                }
+                return THotel;
 	}
 
 	/**
@@ -69,7 +95,23 @@ public class TFabryka {
 	 */
 	public TRezerwacja Create_rezerwacja(String[] data) {
 		// TODO - implement TFabryka.Create_rezerwacja
-		throw new UnsupportedOperationException();
+		TRezerwacja TRezerwacja = null;
+                switch(Integer.parseInt(data[0]))
+                {
+                    case 0:
+                        TRezerwacja = new TRezerwacja();
+                        TRezerwacja.setID_rezerwacji(Integer.parseInt(data[1]));
+                        break;
+                    case 1:
+                        TRezerwacja = new TRezerwacja();
+                        TRezerwacja.setID_rezerwacji(Integer.parseInt(data[1]));;
+                        TRezerwacja.setData(data[2]);
+                        TRezerwacja.setCzas_trwania(data[3]);
+                        TRezerwacja.setKlient(data[4]);
+                        TRezerwacja.setPokoj(data[5]);
+                        break;
+                }
+                return TRezerwacja;
 	}
 
 }

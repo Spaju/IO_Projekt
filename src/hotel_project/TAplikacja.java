@@ -8,6 +8,10 @@ public class TAplikacja {
 	protected List<TUser> Users;
 	protected List<TRezerwacja> Rezerwacje;
 
+        public static void main(String[] t) {
+
+	}
+        
 	public void showlHotel() {
 		// TODO - implement TAplikacja.showlHotel
 		throw new UnsupportedOperationException();
@@ -32,9 +36,6 @@ public class TAplikacja {
 	 * 
 	 * @param t
 	 */
-	public static void main(String[] t) {
-
-	}
 
 	/**
 	 * 

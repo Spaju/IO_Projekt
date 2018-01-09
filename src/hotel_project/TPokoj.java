@@ -2,6 +2,7 @@ package hotel_project;
 
 import java.util.List;
 
+
 public class TPokoj {
 
 	protected int Numer;
@@ -85,6 +86,7 @@ public class TPokoj {
 	}
 
 	public THotel searchHotel() {	
+            throw new UnsupportedOperationException();
 	}
 
 }

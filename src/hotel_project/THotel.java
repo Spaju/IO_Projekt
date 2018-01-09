@@ -1,6 +1,7 @@
 package hotel_project;
 
 import java.util.List;
+import java.util.Iterator;
 
 public class THotel {
 
@@ -45,9 +46,9 @@ public class THotel {
 		this.Il_wolnych_miejsc = Il_wolnych_miejsc;
 	}
 
-	public List<String> getPokoje() {
-            List<String> Pokoje = new List<>();
-            iterator<TPokoj> help = Pokoje.iterator();  
+	public ArrayList<String> getPokoje() {
+            ArrayList<String> Pokoje = new ArrayList<>();
+            Iterator<TPokoj> help = TPokoj.iterator();  
             while(help.hasNext())
                     {
                         TPokoj next = help.next();
@@ -70,7 +71,13 @@ public class THotel {
 	}
 
 	public TPokoj searchPokoj(TPokoj Pokoj) {
-                throw new UnsupportedOperationException();
+                int idx;
+                if((idx=TPokoj.indexOf(Pokoj))!=-1)
+                {
+                    Pokoj=TPokoj.get(idx);
+                    return Pokoj;
+                }
+                return null;
 	}
 
 	public TPokoj addPokoj(String[] data) {
