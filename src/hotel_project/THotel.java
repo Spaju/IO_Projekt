@@ -46,8 +46,8 @@ public class THotel {
 		this.Il_wolnych_miejsc = Il_wolnych_miejsc;
 	}
 
-	public ArrayList<String> getPokoje() {
-            ArrayList<String> Pokoje = new ArrayList<>();
+	public List<String> getPokoje() {
+            List<String> Pokoje = new List<String>();
             Iterator<TPokoj> help = TPokoj.iterator();  
             while(help.hasNext())
                     {
@@ -72,9 +72,9 @@ public class THotel {
 
 	public TPokoj searchPokoj(TPokoj Pokoj) {
                 int idx;
-                if((idx=TPokoj.indexOf(Pokoj))!=-1)
+                if((idx=Pokoje.indexOf(Pokoj))!=-1)
                 {
-                    Pokoj=TPokoj.get(idx);
+                    Pokoj=Pokoje.get(idx);
                     return Pokoj;
                 }
                 return null;
