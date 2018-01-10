@@ -18,6 +18,11 @@ public class TUser {
                 this.Imie = Imie;
                 this.Nazwisko = Nazwisko;
 	}
+        
+            @Override
+	public String toString() {
+		return this.Imie + " " + this.Nazwisko + " " + this.Pesel;
+	}
 
 	public String getLogin() {
 		return this.Login;

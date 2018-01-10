@@ -1,22 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hotel_project;
 
-/**
- *
- * @author Dell
- */
+
 public class TFabryka {
-	/**
-	 * 
-	 * @param data
-     * @return 
-	 */
+	
 	public TUser Create_user(String[] data) {
-		// TODO - implement TFabryka.Create_user
+		
 		TUser TUser = null;
                 switch(Integer.parseInt(data[0]))
                 {
@@ -36,14 +24,10 @@ public class TFabryka {
                 }
                 return TUser;
         }
-                       
-
-	/**
-	 * 
-	 * @param data
-	 */
+        
+        
+        
 	public TPokoj Create_pokoj(String[] data, THotel Hotel) {
-		// TODO - implement TFabryka.Create_pokoj
 		TPokoj TPokoj = null;
                 switch(Integer.parseInt(data[0]))
                 {
@@ -65,12 +49,8 @@ public class TFabryka {
                 return TPokoj;
 	}
 
-	/**
-	 * 
-	 * @param data
-	 */
+        
 	public THotel Create_hotel(String[] data) {
-		// TODO - implement TFabryka.Create_hotel
 		THotel THotel = null;
                 switch(Integer.parseInt(data[0]))
                 {
@@ -88,12 +68,8 @@ public class TFabryka {
                 return THotel;
 	}
 
-	/**
-	 * 
-	 * @param data
-	 */
+
 	public TRezerwacja Create_rezerwacja(String[] data, TUser User, TPokoj Pokoj) {
-		// TODO - implement TFabryka.Create_rezerwacja
 		TRezerwacja TRezerwacja = null;
                 switch(Integer.parseInt(data[0]))
                 {

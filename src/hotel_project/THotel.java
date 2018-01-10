@@ -82,7 +82,7 @@ public class THotel {
 
 	public TPokoj addPokoj(String[] data) {
             TFabryka Factory = new TFabryka();
-            TPokoj Pokoj = Factory.Create_pokoj(data);
+            TPokoj Pokoj = Factory.Create_pokoj(data, this);
             if(searchPokoj(Pokoj)==null)
                 {
                     Pokoje.add(Pokoj);

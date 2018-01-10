@@ -15,6 +15,11 @@ public class TRezerwacja {
                 this.Pokoj = Pokoj;
                 this.Klient = Klient;
 	}
+        
+            @Override
+	public String toString() {
+		return this.ID_rezerwacji + ", " + this.Data + ", " + this.Czas_trwania + ", " + this.Pokoj.toString() + ", " + this.Klient.toString();
+	}
 
 	public int getID_rezerwacji() {
 		return this.ID_rezerwacji;
