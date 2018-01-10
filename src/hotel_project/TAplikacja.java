@@ -1,22 +1,24 @@
 package hotel_project;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class TAplikacja {
 
-	protected List<THotel> Hotele;
-	protected List<TUser> Users;
-	protected List<TRezerwacja> Rezerwacje;
+	protected List<THotel> Hotele = new ArrayList<>();
+	protected List<TUser> Users = new ArrayList<>();
+	protected List<TRezerwacja> Rezerwacje = new ArrayList<>();
 
         public static void main(String[] t) {
                 TAplikacja ap = new TAplikacja();
+                ap.BatmanwithPrepTime();
                 String Hotel1[] = {"1", "Hilton", "Wroclaw", "10"};
                 String Hotel2[] = {"1", "Remont", "Warszawa", "20"};
                 String Hotel3[] = {"1", "Mugo", "Katowice", "8"};
                 ap.addHotel(Hotel1);
                 ap.addHotel(Hotel2);
                 ap.addHotel(Hotel3);
-                //ap.showlHotel();
+                ap.showlHotel();
                 String Pokoj1[] = {"1", "11", "1200", "Wolne", "druga", "4"};
                 String Pokoj2[] = {"1", "12", "800", "Zajete", "pierwsza", "2"};
                 String Pokoj3[] = {"1", "15", "1600", "Wolne", "kondo", "2"};
@@ -41,9 +43,9 @@ public class TAplikacja {
                 ap.Hotele.get(0).addPokoj(Pokoj10);
                 ap.Hotele.get(2).addPokoj(Pokoj11);
                 ap.Hotele.get(2).addPokoj(Pokoj12);
-                ap.showPokoj(0);
                 ap.showPokoj(1);
                 ap.showPokoj(2);
+                ap.showPokoj(3);
                 String User1[] = {"1", "92021803641", "arturm@gmail.com", "kaszka2", "SuperKolo", "Artur", "Mazur"};
                 String User2[] = {"1", "86111409645", "amfa12@gmail.com", "morfa", "Dopalacze", "Mariusz", "Koks"};
                 String User3[] = {"1", "93090303459", "karzel@gmail.com", "malyduzy", "Liliput", "Tomek", "Zastaw"};
@@ -52,25 +54,36 @@ public class TAplikacja {
                 ap.addUser(User3);
                 String Rezerw1[] = {"1", "123789", "14.02.2018", "5 dni"};
                 String Rezerw2[] = {"1", "534652", "18.04.2018", "2 dni"};
-                ap.addRezerwacja(Rezerw1, 0, 1, 2);
-                ap.addRezerwacja(Rezerw1, 1, 2, 1);
+                ap.addRezerwacja(Rezerw1, 1, 1, 2);
+                ap.addRezerwacja(Rezerw2, 2, 2, 1);
+                ap.showRezerwacje();
 	}
         
         
+        public void BatmanwithPrepTime(){
+                TUser User = new TUser();
+                Users.add(User);
+                THotel Hotel = new THotel();
+                Hotele.add(Hotel);
+                TRezerwacja Rezerwacja = new TRezerwacja();
+                Rezerwacje.add(Rezerwacja);
+        }
+        
+        
 	public void showlHotel() {
-		for(int i=0; i<Hotele.size(); i++)
+		for(int i=1; i<Hotele.size(); i++)
                     Hotele.get(i).toString();
 	}
         
 
 	public void showPokoj(int x) {
-		for(int i=0; i<Hotele.get(x).Pokoje.size(); i++)
+		for(int i=1; i<Hotele.get(x).Pokoje.size(); i++)
                     Hotele.get(x).Pokoje.get(i).toString();
 	}
         
         
         public void showRezerwacje() {
-		for(int i=0; i<Rezerwacje.size(); i++)
+		for(int i=1; i<Rezerwacje.size(); i++)
                     Rezerwacje.get(i).toString();
 	}
         
@@ -128,7 +141,7 @@ public class TAplikacja {
         
         public THotel searchHotel(THotel Hotel) {
 		for(int i=0;i<Hotele.size();i++){
-                    if(Hotele.get(i)==Hotel)
+                    if(Hotel.equals(Hotele.get(i)))
                         return Hotel;
                 }
                 return null;

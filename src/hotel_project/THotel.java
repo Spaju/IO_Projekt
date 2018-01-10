@@ -2,13 +2,15 @@ package hotel_project;
 
 import java.util.List;
 import java.util.Iterator;
+import java.util.ArrayList;
+
 
 public class THotel {
 
 	protected String Nazwa;
 	protected String Lokacja;
 	protected String Il_wolnych_miejsc;
-	protected List<TPokoj> Pokoje;
+	protected List<TPokoj> Pokoje = new ArrayList<>();
 
 	public void THotel(String Nazwa, String Lokacja, String Il_wolnych_miejsc, List<TPokoj> Pokoje) {
 		this.Nazwa = Nazwa;
@@ -46,8 +48,8 @@ public class THotel {
 		this.Il_wolnych_miejsc = Il_wolnych_miejsc;
 	}
 
-	public List<String> getPokoje() {
-            List<String> Pokojee = new List<String>();
+	public ArrayList<String> getPokoje() {
+            ArrayList<String> Pokojee = new ArrayList<>();
             Iterator<TPokoj> help = Pokoje.iterator();
             while(help.hasNext())
                     {
@@ -56,7 +58,7 @@ public class THotel {
                     }
             return Pokojee;
 	}
-
+           
 	public void setPokoje(List<TPokoj> Pokoje) {
 		this.Pokoje = Pokoje;
 	}
