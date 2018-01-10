@@ -18,8 +18,8 @@ public class THotel {
 	}
         
         @Override
-	public String toString() {
-		return this.Nazwa + " " + this.Lokacja;
+	public String toString() {	
+                return this.Nazwa + " " + this.Lokacja;
 	}
 
 	public String getNazwa() {
