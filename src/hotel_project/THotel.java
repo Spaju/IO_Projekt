@@ -19,6 +19,12 @@ public class THotel {
                 this.Pokoje = Pokoje;
 	}
         
+        public void THotel(String[] data) {
+		this.Nazwa = data[1];
+                this.Lokacja = data[2];
+                this.Il_wolnych_miejsc = data[3];
+	}
+        
         @Override
 	public String toString() {	
                 return this.Nazwa + " " + this.Lokacja;
@@ -88,6 +94,14 @@ public class THotel {
             if(searchPokoj(Pokoj)==null)
                 {
                     Pokoje.add(Pokoj);
+                }
+                return null;
+	}
+        
+        public TPokoj addPokoj(TPokoj pokoj) {
+            if(searchPokoj(pokoj)==null)
+                {
+                    Pokoje.add(pokoj);
                 }
                 return null;
 	}

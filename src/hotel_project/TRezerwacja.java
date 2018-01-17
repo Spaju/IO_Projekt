@@ -9,7 +9,7 @@ public class TRezerwacja {
 	protected TUser Klient;
 
 	public void TRezerwacja(int ID_rezerwacja, String Data, String Czas_trwania, TPokoj Pokoj, TUser Klient) {
-		this.ID_rezerwacji = ID_rezerwacji;
+		this.ID_rezerwacji = ID_rezerwacja;
                 this.Data = Data;
                 this.Czas_trwania = Czas_trwania;
                 this.Pokoj = Pokoj;

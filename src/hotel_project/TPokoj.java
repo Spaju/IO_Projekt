@@ -1,7 +1,8 @@
 package hotel_project;
 
-import java.util.Iterator;
+//import java.util.Iterator;
 import java.util.List;
+import java.util.ArrayList;
 
 
 public class TPokoj {
@@ -13,7 +14,7 @@ public class TPokoj {
 	protected String Klasa;
 	protected float Cena;
 	protected String Stan;
-	protected List<TRezerwacja> Rezerwacje;
+	protected List<TRezerwacja> Rezerwacje = new ArrayList<>();
 
         
 	public void TPokoj(int Numer, int Il_miejsc, THotel Hotel, String Klasa, float Cena, String Stan) {
@@ -22,9 +23,19 @@ public class TPokoj {
                 this.Hotel = Hotel;
                 this.Klasa = Klasa;
                 this.Cena = Cena;
-                this.Stan = Stan;
-                
+                this.Stan = Stan;        
 	}
+        
+        public void TPokoj(String[] data, THotel Hotel) {
+		this.Numer = Integer.parseInt(data[1]);
+                this.Il_miejsc = Integer.parseInt(data[5]);
+                this.Klasa = data[4];
+                this.Cena = Float.parseFloat(data[2]);
+                this.Stan = data[3];
+                this.Hotel = Hotel;
+	}
+        
+        
            @Override
 	public String toString() {
 		return this.Numer + " " + this.Il_miejsc + " " + this.Hotel.toString() + " " + this.Klasa + " " + this.Cena + " " + this.Stan;
@@ -78,12 +89,19 @@ public class TPokoj {
 		this.Stan = Stan;
 	}
 
-	public boolean equals(TPokoj obj) {
+	@Override
+        public boolean equals(Object obj) {
+                if(this == obj)
+                    return true;
 		if(obj == null)
                     return false;
-                if(this.Numer == obj.Numer)
-                    return this.Hotel == obj.Hotel;
-                else
+                if(getClass() != obj.getClass())
                     return false;
+                TPokoj other = (TPokoj) obj;
+                if(this.Numer == other.Numer)
+                    if(this.Il_miejsc == other.Il_miejsc)
+                        if(this.Cena == other.Cena)
+                            return true;
+                return false;
         }
 }

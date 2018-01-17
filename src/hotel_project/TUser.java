@@ -10,13 +10,22 @@ public class TUser {
 	protected String Nazwisko;
 
 
-	public void TUser(String Login, String Haslo, String Email, String Pesel, String Imie, String Nazwisko) {
-		this.Login = Login;
-                this.Haslo = Haslo;
-                this.Email = Email;
-                this.Pesel = Pesel;
-                this.Imie = Imie;
-                this.Nazwisko = Nazwisko;
+	public void TUser(String Pesell, String Emaill, String Hasloo, String Loginn, String Imiee, String Nazwiskoo) {
+		this.Login = Loginn;
+                this.Haslo = Hasloo;
+                this.Email = Emaill;
+                this.Pesel = Pesell;
+                this.Imie = Imiee;
+                this.Nazwisko = Nazwiskoo;
+	}
+        
+        public void TUser(String data[]) {
+		this.Login = data[4];
+                this.Haslo = data[3];
+                this.Email = data[2];
+                this.Pesel = data[1];
+                this.Imie = data[5];
+                this.Nazwisko = data[6];
 	}
         
             @Override
@@ -71,5 +80,17 @@ public class TUser {
 	public void setNazwisko(String Nazwisko) {
                 this.Nazwisko = Nazwisko;
 	}
+        
+        @Override
+        public boolean equals(Object obj) {
+                if(this == obj)
+                    return true;
+		if(obj == null)
+                    return false;
+                if(getClass() != obj.getClass())
+                    return false;
+                TUser other = (TUser) obj;
+                return this.Pesel.equals(other.Pesel);
+        }
 
 }

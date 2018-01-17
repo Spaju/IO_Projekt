@@ -1,5 +1,7 @@
 package hotel_project;
 
+import java.util.IllegalFormatCodePointException;
+
 
 public class TFabryka {
 	
@@ -21,6 +23,8 @@ public class TFabryka {
                         TUser.setImie(data[5]);
                         TUser.setNazwisko(data[6]);
                         break;
+                    default:
+                        throw new IllegalFormatCodePointException(0);
                 }
                 return TUser;
         }

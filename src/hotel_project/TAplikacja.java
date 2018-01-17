@@ -116,6 +116,7 @@ public class TAplikacja {
                 if(searchUser(User)==null)
                 {
                     Users.add(User);
+                    return User;
                 }
                 return null;
 	}
